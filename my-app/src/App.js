@@ -2,16 +2,16 @@ import './App.css';
 
 // spa
 import { Route } from "react-router-dom";
-import HomePage from './Pages/HomePage';
-import AboutUs from './Pages/AboutUs';
 import NavigationBar from './components/NavigationBar';
+import routes from './routes';
 
 function App() {
   return (
       <div>
         <NavigationBar />
-        <Route path="/" exact={true} render={(props) => <HomePage name="hossein" {...props} />} />
-        <Route path="/about-us" component={AboutUs} />
+        {
+          routes.map((route) => <Route {...route} />)
+        }
       </div>
   );
 }
