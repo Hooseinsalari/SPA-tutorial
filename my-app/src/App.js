@@ -2,18 +2,19 @@ import './App.css';
 
 // spa
 import { Route, Switch } from "react-router-dom";
-import NavigationBar from './components/NavigationBar';
 import routes from './routes';
+import Layout from './Layout/Layout';
 
 function App() {
   return (
       <div>
-        <NavigationBar />
-        <Switch>
-        {
-          routes.map((route) => <Route {...route} />)
-        }
-        </Switch>
+        <Layout>
+          <Switch>
+            {
+              routes.map((route) => <Route key={route.path} {...route} />)
+            }
+          </Switch>
+        </Layout>
       </div>
       
   );

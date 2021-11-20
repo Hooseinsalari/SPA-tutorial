@@ -6,10 +6,9 @@ const NavigationBar = (props) => {
     <div>
       <nav>
         <ul>
-            {console.log(props)}
-          <Link to="/">home page</Link>
-          <br />
-          <Link to="/about-us">about us</Link>
+          <li><Link to="/">home page</Link></li>
+          <li><Link to="/about-us">about us</Link></li>
+          <li><Link to="/product">products</Link></li>
         </ul>
       </nav>
     </div>
