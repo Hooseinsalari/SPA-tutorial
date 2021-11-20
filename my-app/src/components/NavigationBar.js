@@ -8,6 +8,7 @@ const NavigationBar = (props) => {
         <ul>
           <li><Link to="/">home page</Link></li>
           <li><Link to="/about-us">about us</Link></li>
+          <li><Link to="/profile">profile</Link></li>
           <li><Link to="/product">products</Link></li>
         </ul>
       </nav>

@@ -14,7 +14,7 @@ const Products = () => {
             <h1>Product</h1>
             <ul>
             {
-                item.map((item) => <li><Link key={item.name} to={item.to}>{item.name}</Link></li>)
+                item.map((item) => <li><Link to={{pathname: item.to, search:"sort=name"}}>{item.name}</Link></li>)
             }
             </ul>
         </div>

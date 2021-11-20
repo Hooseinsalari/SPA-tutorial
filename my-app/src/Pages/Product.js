@@ -1,10 +1,13 @@
 import React from 'react';
 
-const Product = (props) => {
-    const id = props.match.params.id
+const Product = ({match, location}) => {
+    const id = match.params.id
+    const queryString = require('query-string');
+    const parsed = queryString.parse(location.search);
+
     return (
         <div>
-            {console.log(props)}
+            {console.log(parsed)}
             <h3>product - {id}</h3>
         </div>
     );
