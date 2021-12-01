@@ -1,7 +1,7 @@
 import './App.css';
 
 // spa
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import routes from './routes';
 import Layout from './Layout/Layout';
 
@@ -10,6 +10,7 @@ function App() {
       <div>
         <Layout>
           <Routes>
+            <Route path="/" element={<Navigate replace to="/product" />} />
             {
               routes.map((route) => <Route key={route.path} {...route} />)
             }
