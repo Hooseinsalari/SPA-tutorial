@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import Dashboard from '../components/Dashboard';
 import Download from '../components/Download';
 
@@ -11,8 +11,10 @@ const Profile = () => {
                 <li><Link to="/profile/dashboard">Dashboard</Link></li>
                 <li><Link to="/profile/download">Download</Link></li>
             </ul>
+            <Routes>
             <Route path="/profile/dashboard" component={Dashboard} />
             <Route path="/profile/download" component={Download} />
+            </Routes>
         </div>
     );
 };

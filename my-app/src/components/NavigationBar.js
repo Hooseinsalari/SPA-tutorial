@@ -1,7 +1,10 @@
 import React from "react";
-import { Link, withRouter } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
-const NavigationBar = (props) => {
+const NavigationBar = () => {
+
+  const params = useParams();
+
   return (
     <div>
       <nav>
@@ -16,4 +19,4 @@ const NavigationBar = (props) => {
   );
 };
 
-export default withRouter(NavigationBar);
+export default NavigationBar;

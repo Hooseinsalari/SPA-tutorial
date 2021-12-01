@@ -6,12 +6,12 @@ import Product from "./Pages/Product";
 import Profile from "./Pages/Profile";
 
 const routes = [
-    {path: "/product/:id", component: Product},
-    {path: "/profile", component:Profile},
-    {path: "/product", component:Products},
-    {path:"/about-us", component: AboutUs},
-    {path: "/", component: HomePage, exact: true},
-    {component: NoteFound}
+    {path: "/product/:id", element: <Product />},
+    {path: "/profile", element: <Profile />},
+    {path: "/product", element: <Products />},
+    {path:"/about-us", element: <AboutUs />},
+    {path: "/", element: <HomePage />},
+    {element: <NoteFound />}
 ]
 
 export default routes;
