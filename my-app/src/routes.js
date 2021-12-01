@@ -7,7 +7,7 @@ import Profile from "./Pages/Profile";
 
 const routes = [
     {path: "/product/:id", element: <Product />},
-    {path: "/profile", element: <Profile />},
+    {path: "/profile/*", element: <Profile />},
     {path: "/product", element: <Products />},
     {path:"/about-us", element: <AboutUs />},
     {path: "/", element: <HomePage />},
